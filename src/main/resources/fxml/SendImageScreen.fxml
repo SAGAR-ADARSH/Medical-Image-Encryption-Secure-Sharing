@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="14" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.medicalsecurity.ui.controllers.SendImageController">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+    <Label text="Send Encrypted Image" styleClass="label-title"/>
+    <Label text="The image is encrypted locally with AES-256-GCM; the data key is wrapped for the chosen specialist only."
+           styleClass="label-muted" wrapText="true"/>
+
+    <VBox styleClass="card" spacing="10">
+        <Label text="Image file"/>
+        <HBox spacing="8">
+            <TextField fx:id="filePathField" editable="false" promptText="no file selected" HBox.hgrow="ALWAYS"/>
+            <Button text="Browse..." onAction="#handleBrowse"/>
+        </HBox>
+        <Label text="Recipient (specialist)"/>
+        <ComboBox fx:id="recipientBox" promptText="choose a recipient"/>
+        <HBox spacing="8">
+            <Button fx:id="sendButton" text="Encrypt &amp; Send" onAction="#handleSend"/>
+            <Button text="Refresh recipients" styleClass="button-secondary" onAction="#handleRefresh"/>
+        </HBox>
+        <ProgressBar fx:id="progressBar" progress="0" maxWidth="Infinity"/>
+        <Label fx:id="resultLabel" text="" wrapText="true"/>
+    </VBox>
+</VBox>

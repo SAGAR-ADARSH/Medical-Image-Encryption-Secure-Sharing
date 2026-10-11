@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="14" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.medicalsecurity.ui.controllers.SettingsController">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+    <Label text="Settings" styleClass="label-title"/>
+    <Label text="Configuration is read from environment variables / medsec.properties (see README). Secrets are redacted."
+           styleClass="label-muted" wrapText="true"/>
+    <VBox styleClass="card" spacing="8">
+        <Label text="Active configuration" styleClass="label-subtitle"/>
+        <TextArea fx:id="configArea" editable="false" prefRowCount="16" wrapText="false"/>
+    </VBox>
+    <VBox styleClass="card" spacing="8">
+        <Label text="Backend services" styleClass="label-subtitle"/>
+        <Label fx:id="backendLabel" text="" wrapText="true" styleClass="label-muted"/>
+    </VBox>
+</VBox>

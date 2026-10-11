@@ -1,0 +1,162 @@
+/* ============================================================
+   Medical Image Encryption & Secure Sharing - UI theme
+   Navy / white academic theme (spec section 6.1)
+   ============================================================ */
+
+.root {
+    -fx-font-family: "Segoe UI", "Ubuntu", "Sans-serif";
+    -fx-font-size: 13px;
+    -fx-background-color: #FFFFFF;
+}
+
+/* ---- Colour tokens ------------------------------
+   navy        #0B2545   primary background
+   navy-deep   #081A33   headers
+   navy-soft   #13315C   panels
+   accent      #2E7DD1   interactive
+   white       #FFFFFF
+   light       #F4F7FB   table stripes / fields
+   success     #1E7A46
+   danger      #B3261E
+-------------------------------------------------- */
+
+.label-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0B2545;
+}
+
+.label-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #13315C;
+}
+
+.label-muted {
+    -fx-text-fill: #5A6B82;
+}
+
+/* ---- Buttons ----------------------------------- */
+.button {
+    -fx-background-color: #2E7DD1;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 6;
+    -fx-padding: 8 18 8 18;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #1F63B0;
+}
+
+.button-danger {
+    -fx-background-color: #B3261E;
+}
+
+.button-danger:hover {
+    -fx-background-color: #8F1D17;
+}
+
+.button-secondary {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #0B2545;
+    -fx-border-color: #0B2545;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+/* ---- Inputs ------------------------------------ */
+.text-field, .password-field, .text-area, .combo-box {
+    -fx-background-color: #F4F7FB;
+    -fx-border-color: #C7D3E3;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-prompt-text-fill: #5A6B82;
+}
+
+/* ---- Panels ------------------------------------ */
+.panel-header {
+    -fx-background-color: #0B2545;
+}
+
+.panel-header .label {
+    -fx-text-fill: #FFFFFF;
+}
+
+.panel-side {
+    -fx-background-color: #081A33;
+}
+
+.panel-side .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #D6E2F2;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 16 10 16;
+}
+
+.panel-side .button:hover {
+    -fx-background-color: #13315C;
+}
+
+.card {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D8E2EF;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(three-pass-box, rgba(11, 37, 69, 0.12), 8, 0, 0, 2);
+}
+
+/* ---- Tables ------------------------------------ */
+.table-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #D8E2EF;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #0B2545;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #FFFFFF;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #F4F7FB;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #CFE0F5;
+}
+
+/* ---- Status / badges ---------------------------- */
+.badge-ok {
+    -fx-text-fill: #1E7A46;
+    -fx-font-weight: bold;
+}
+
+.badge-warn {
+    -fx-text-fill: #B3261E;
+    -fx-font-weight: bold;
+}
+
+.status-bar {
+    -fx-background-color: #13315C;
+}
+
+.status-bar .label {
+    -fx-text-fill: #D6E2F2;
+}
+
+/* ---- Progress ---------------------------------- */
+.progress-bar .bar {
+    -fx-background-color: #2E7DD1;
+}
+
+.progress-bar .track {
+    -fx-background-color: #D8E2EF;
+}
