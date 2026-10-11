@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="16" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.medicalsecurity.ui.controllers.DashboardController">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+    <Label text="Dashboard" styleClass="label-title"/>
+    <Label fx:id="welcomeLabel" text="" styleClass="label-subtitle"/>
+
+    <HBox spacing="16">
+        <VBox styleClass="card" spacing="6" prefWidth="220">
+            <Label text="Inbox" styleClass="label-subtitle"/>
+            <Label fx:id="inboxCount" text="-" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #0B2545;"/>
+            <Label text="incoming transfers" styleClass="label-muted"/>
+        </VBox>
+        <VBox styleClass="card" spacing="6" prefWidth="220">
+            <Label text="Outbox" styleClass="label-subtitle"/>
+            <Label fx:id="outboxCount" text="-" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #0B2545;"/>
+            <Label text="sent transfers" styleClass="label-muted"/>
+        </VBox>
+        <VBox styleClass="card" spacing="6" prefWidth="220">
+            <Label text="Users" styleClass="label-subtitle"/>
+            <Label fx:id="userCount" text="-" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #0B2545;"/>
+            <Label text="registered accounts" styleClass="label-muted"/>
+        </VBox>
+        <VBox styleClass="card" spacing="6" prefWidth="220">
+            <Label text="Audit" styleClass="label-subtitle"/>
+            <Label fx:id="auditCount" text="-" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #0B2545;"/>
+            <Label text="recorded security events" styleClass="label-muted"/>
+        </VBox>
+    </HBox>
+
+    <VBox styleClass="card" spacing="8">
+        <Label text="Security model at a glance" styleClass="label-subtitle"/>
+        <Label wrapText="true" styleClass="label-muted"
+               text="Each transfer is encrypted with a fresh AES-256-GCM data key and a unique 96-bit nonce. The data key is wrapped with the recipient's RSA-2048 public key (PKCS#12 keystore). Private keys never leave the recipient keystore; the server stores only wrapped keys. Authentication, role checks and audit logging run in the backend services."/>
+    </VBox>
+</VBox>

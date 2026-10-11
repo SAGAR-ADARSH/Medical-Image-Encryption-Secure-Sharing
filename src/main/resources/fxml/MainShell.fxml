@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.medicalsecurity.ui.controllers.MainShellController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="16" styleClass="panel-header">
+            <padding>
+                <Insets top="12" right="20" bottom="12" left="20"/>
+            </padding>
+            <Label fx:id="titleLabel" text="Medical Image Encryption &amp; Secure Sharing"
+                   style="-fx-font-size: 18px; -fx-text-fill: white; -fx-font-weight: bold;" HBox.hgrow="ALWAYS"/>
+            <Label fx:id="userLabel" text="" style="-fx-text-fill: #D6E2F2;"/>
+            <Button fx:id="logoutButton" text="Log out" styleClass="button-secondary" onAction="#handleLogout"/>
+        </HBox>
+    </top>
+    <left>
+        <VBox fx:id="sideNav" spacing="6" styleClass="panel-side" prefWidth="220">
+            <padding>
+                <Insets top="18" right="10" bottom="18" left="10"/>
+            </padding>
+            <Button fx:id="navDashboard" text="Dashboard" onAction="#showDashboard" maxWidth="Infinity"/>
+            <Button fx:id="navSend" text="Send Image" onAction="#showSend" maxWidth="Infinity"/>
+            <Button fx:id="navOutbox" text="Outbox" onAction="#showOutbox" maxWidth="Infinity"/>
+            <Button fx:id="navInbox" text="Inbox" onAction="#showInbox" maxWidth="Infinity"/>
+            <Button fx:id="navVerify" text="Verify &amp; Decrypt" onAction="#showVerify" maxWidth="Infinity"/>
+            <Button fx:id="navStatus" text="Transfer History" onAction="#showStatus" maxWidth="Infinity"/>
+            <Button fx:id="navUsers" text="User Management" onAction="#showUsers" maxWidth="Infinity"/>
+            <Button fx:id="navKeys" text="Key Management" onAction="#showKeys" maxWidth="Infinity"/>
+            <Button fx:id="navAudit" text="Audit Log" onAction="#showAudit" maxWidth="Infinity"/>
+            <Button fx:id="navSettings" text="Settings" onAction="#showSettings" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="contentPane"/>
+    </center>
+    <bottom>
+        <HBox styleClass="status-bar" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="6" right="16" bottom="6" left="16"/>
+            </padding>
+            <Label fx:id="statusLabel" text="Ready"/>
+        </HBox>
+    </bottom>
+</BorderPane>

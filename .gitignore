@@ -1,0 +1,45 @@
+# Build output
+target/
+out/
+build/
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+nbproject/
+
+# Runtime data (encrypted-file storage, keystores, logs) - NEVER commit
+data/
+storage/
+keystores/
+*.p12
+*.jks
+*.key
+*.pem
+logs/
+*.log
+
+# Local configuration with machine-specific values / secrets
+.env
+application-local.properties
+local-config.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test/demo scratch
+tmp/
+/tmp/
+samples/generated/
+
+# Local sandbox build tooling (not part of the deliverable)
+tools-local/
+medsec.properties

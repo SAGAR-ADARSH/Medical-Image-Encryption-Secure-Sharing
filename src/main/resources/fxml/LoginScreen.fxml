@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="14" styleClass="panel-header" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.medicalsecurity.ui.controllers.LoginController">
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text="Medical Image Encryption &amp; Secure Sharing" style="-fx-font-size: 24px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+    <Label text="Sign in with your hospital account" style="-fx-text-fill: #D6E2F2;"/>
+
+    <VBox spacing="10" styleClass="card" maxWidth="380">
+        <padding>
+            <Insets top="24" right="24" bottom="24" left="24"/>
+        </padding>
+        <Label text="Username"/>
+        <TextField fx:id="usernameField" promptText="e.g. admin"/>
+        <Label text="Password"/>
+        <PasswordField fx:id="passwordField" promptText="password"/>
+        <Label fx:id="statusLabel" styleClass="label-muted" text=""/>
+        <Button fx:id="loginButton" text="Sign In" onAction="#handleLogin" maxWidth="Infinity"/>
+        <Label text="Roles: ADMIN (manage users), DOCTOR (send images), SPECIALIST (receive &amp; decrypt)"
+               styleClass="label-muted" wrapText="true"/>
+    </VBox>
+</VBox>
